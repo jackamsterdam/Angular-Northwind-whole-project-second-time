@@ -1,0 +1,16 @@
+<div class="box">
+    <label>Item:</label>
+    <input type="text" [(ngModel)]="item">
+    <button (click)="makeOrder()">click here to display order you typed in input</button>
+</div> 
+
+
+
+
+   <!-- the binding happens with spaecial tahbir [{}] banana in a box  not with value and oncheange liek react  -->
+    <!-- ngModel is inside the module formsModule thas why we imported it  -->
+    <!-- we tell ngModel which variable we want to lehaber it to connect it with  -->
+        <!-- () is the banana and [] is the box  -->
+    <!-- its the two conectps combined!!:
+    1.property binding from ts to here in html so []
+    2.event binding - every click () you return it to ts -->

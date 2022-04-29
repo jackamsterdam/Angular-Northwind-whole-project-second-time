@@ -1,0 +1,17 @@
+<!-- attribute directive [ngSomething] -->
+
+<div class="box" [ngClass]="dynamicClass">
+    <p>Best Products Ever!</p>
+
+    <p [ngStyle]="{backgroundColor: 'green'}">Ng Style</p>
+</div>
+
+<!-- ngclass  says give me a class and i will randomy put it -->
+<!-- אז הוא עשה שינוי לתגית הוא שינה לה את הקלסא       -->
+<!-- btw !! [class]="variable" also works but ng gives you so much more capablilites!! -->
+<!-- //! regular property binding -->
+
+<!-- but the advanatage of using ngdirective is that you can give it a couple more   -->
+<!-- <div class="box" [ngClass] = "{cool: true, nice: false,}" -->
+
+    <!-- so the tagit changed -->

@@ -1,0 +1,12 @@
+<!-- structural directive *ngsomething *ngFor  -->
+
+<div class="box">
+    <p>
+        Our Desserts: 
+        <span *ngFor="let d of desserts">{{d.name}} | </span>
+    </p>
+</div>
+
+   <!-- he doesnt always display maybe the array [] is empty so wont display  -->
+    <!-- so first he makes the array diesaper and then runs in a looop and THEN DISPLAY THE NAMWE    -->
+    <!-- so *ngfor  instead of map in react  -->

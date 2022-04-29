@@ -1,0 +1,13 @@
+<!-- conditioanl rednering  -->
+
+<div class="box">
+    <p>Our Specials:
+ <span *ngIf="isWeekend()">Cholent</span>
+    <span *ngIf="!isWeekend()">Pasta</span>
+
+    </p>
+   
+</div>
+
+<!-- so ngIf if he returns true i want to show this tagit  -->
+<!-- so *ng.... decides wthere to dispaly or not and first of all doesnt display to not lehamis on the dom  -->
