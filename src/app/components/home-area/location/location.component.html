@@ -1,0 +1,17 @@
+
+<!-- template reference variable  -->
+<div class="box">
+    <label>Location:</label>
+    <select defaultValue="" #locationBox (change)="displayLocation(locationBox.value)">
+        <option disabled value="">Select location</option>
+        <option>North</option>
+        <option>South</option>
+        <option>East</option>
+        <option>West</option>
+    </select>
+    <span>My location: {{locationBox.value}}</span>
+</div>
+
+
+
+<!-- so in a form you can do template reference variable or two way binidng but template rereference varaible  is less code  adn you can do reactive forms as well  -->

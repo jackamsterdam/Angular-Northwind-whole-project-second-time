@@ -12,4 +12,8 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  displaySurveyResult(result: string):void {
+    console.log('Survey Result ' + result)
+  }
+
 }

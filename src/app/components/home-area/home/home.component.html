@@ -14,3 +14,31 @@
 <app-desserts></app-desserts>
 <!-- if you dont want sepereate html ;  -->
 <app-tip></app-tip>
+
+<!-- part 2  -->
+<!-- ngStyle  -->
+<app-color-box></app-color-box>
+<!-- pipe   nad we put custome pipe there  -->
+<app-coupon></app-coupon>
+<!-- template referecne variabel  -->
+<app-location></app-location>
+<!-- props @Input  -->
+<app-pricing item="Ice Cream" [price]="15.7"></app-pricing>
+<app-pricing item="Ice Tea" [price]="8.5"></app-pricing>
+<!-- just like we have inputs from parent to child we can listen to event from child here and get the child props that they emit to me  -->
+<!-- pay attention you need to write the child selector ! here  and put (report) event listerner -->
+<app-survey (report)="displaySurveyResult($event)"></app-survey>
+
+<!-- Lifecycle hooks  -->
+<app-clock></app-clock>
+
+<!-- using services  -->
+<app-colorful></app-colorful>
+
+<!-- custom attribute directive  -->
+<app-help></app-help>
+
+<!-- custom structurtal directive  -->
+<app-winter-sale></app-winter-sale>
+
+

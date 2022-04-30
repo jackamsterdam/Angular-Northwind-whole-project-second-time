@@ -1,1 +1,24 @@
-<p>color-box works!</p>
+<!-- ngStyle  -->
+
+
+<div class="box" [ngStyle]="{backgroundColor: color}">
+   <input type="text" [(ngModel)]="color">
+   <span>{{color}}</span>
+</div>
+<!-- another way:  -->
+<div class="box" [ngStyle]="myStyles">
+   <input type="text" [(ngModel)]="color">
+   <span>{{color}}</span>
+</div>
+
+
+
+
+
+
+    <!-- ng style gets an object that has styling  -->
+    
+    <!-- (attribute directive and property binding in same tinme ) -->
+    
+    
+    <!-- you can do class. style. as well if you want one -->

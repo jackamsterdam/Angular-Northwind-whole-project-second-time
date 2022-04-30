@@ -16,8 +16,9 @@ export class SpecialsComponent implements OnInit {
     const now = new Date() 
     const dayOfWeek = now.getDay() + 1 
     // console.log(now.getDate())  //29 on the 29
-    console.log(now.getDay())  // 5 on friday   so getDAy + 1 will be 6 on friday!! 
+    // console.log(now.getDay())  // 5 on friday   so getDAy + 1 will be 6 on friday!! 
     return dayOfWeek >= 6  //if true we are in the weekend
   }
 
 }
+  

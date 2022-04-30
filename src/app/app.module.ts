@@ -18,7 +18,18 @@ import { SloganComponent } from './components/home-area/slogan/slogan.component'
 import { SpecialsComponent } from './components/home-area/specials/specials.component';
 import { DessertsComponent } from './components/home-area/desserts/desserts.component';
 import { TipComponent } from './components/home-area/tip/tip.component';
-import { ColorBoxComponent } from './components/home-area/color-box/color-box.component'
+import { ColorBoxComponent } from './components/home-area/color-box/color-box.component';
+import { CouponComponent } from './components/home-area/coupon/coupon.component';
+import { NumToWordPipe } from './pipes/num-to-word.pipe';
+import { LocationComponent } from './components/home-area/location/location.component';
+import { PricingComponent } from './components/home-area/pricing/pricing.component';
+import { SurveyComponent } from './components/home-area/survey/survey.component';
+import { ClockComponent } from './components/home-area/clock/clock.component';
+import { ColorfulComponent } from './components/home-area/colorful/colorful.component';
+import { HelpComponent } from './components/home-area/help/help.component';
+import { HighlightDirective } from './directives/highlight.directive';
+import { WinterDirective } from './directives/winter.directive';
+import { WinterSaleComponent } from './components/home-area/winter-sale/winter-sale.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +47,18 @@ import { ColorBoxComponent } from './components/home-area/color-box/color-box.co
     SpecialsComponent,
     DessertsComponent,
     TipComponent,
-    ColorBoxComponent
+    ColorBoxComponent,
+    CouponComponent,
+    NumToWordPipe,
+    LocationComponent,
+    PricingComponent,
+    SurveyComponent,
+    ClockComponent,
+    ColorfulComponent,
+    HelpComponent,
+    HighlightDirective,
+    WinterDirective,
+    WinterSaleComponent
     
   ],
   imports: [
