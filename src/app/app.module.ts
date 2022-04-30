@@ -13,7 +13,7 @@ import { SaleComponent } from './components/home-area/sale/sale.component';
 import { BestProductComponent } from './components/home-area/best-product/best-product.component';
 import { OrderComponent } from './components/home-area/order/order.component';
 
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { SloganComponent } from './components/home-area/slogan/slogan.component';
 import { SpecialsComponent } from './components/home-area/specials/specials.component';
 import { DessertsComponent } from './components/home-area/desserts/desserts.component';
@@ -30,6 +30,14 @@ import { HelpComponent } from './components/home-area/help/help.component';
 import { HighlightDirective } from './directives/highlight.directive';
 import { WinterDirective } from './directives/winter.directive';
 import { WinterSaleComponent } from './components/home-area/winter-sale/winter-sale.component';
+import {HttpClientModule} from '@angular/common/http';
+import { ProductListComponent } from './components/products-area/product-list/product-list.component';
+import { ProductDetailsComponent } from './components/products-area/product-details/product-details.component';
+import { AddProductComponent } from './components/products-area/add-product/add-product.component';
+import { UpdateProductComponent } from './components/products-area/update-product/update-product.component';
+import { AboutComponent } from './components/about-area/about/about.component';
+import { PageNotFoundComponent } from './components/layout-area/page-not-found/page-not-found.component';
+import { ProductCardComponent } from './components/products-area/product-card/product-card.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +66,14 @@ import { WinterSaleComponent } from './components/home-area/winter-sale/winter-s
     HelpComponent,
     HighlightDirective,
     WinterDirective,
-    WinterSaleComponent
+    WinterSaleComponent,
+    ProductListComponent,
+    ProductDetailsComponent,
+    AddProductComponent,
+    UpdateProductComponent,
+    AboutComponent,
+    PageNotFoundComponent,
+    ProductCardComponent
     
   ],
   imports: [
@@ -66,7 +81,9 @@ import { WinterSaleComponent } from './components/home-area/winter-sale/winter-s
     AppRoutingModule,
         // if we want to do 2 way binding with inputs we need a command pkuda that is in a differetn module so we need to import it !! 
 
-    FormsModule
+    FormsModule,
+    HttpClientModule, //need this for http requests
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [LayoutComponent]

@@ -13,3 +13,8 @@ div > a {
 }
 
 /* work with css dev tools all the time like Regina  */
+
+.active {
+    color: green;
+    font-weight: bold;
+}

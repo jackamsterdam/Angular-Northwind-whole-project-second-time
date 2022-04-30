@@ -1,0 +1,27 @@
+div {
+    width: 250px;
+    padding: 20px;
+    margin: 20px;
+}
+
+input {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 0 20px 0;
+}
+
+span {
+    color: red;
+    position: absolute;
+    margin: 0 20px;
+}
+
+button {
+    width: 100%;
+    margin: 10px 0 20px 0;
+}
+
+.ng-touched.ng-invalid:not(form){
+    border: 2px solid red;
+    background-color: pink;
+}

@@ -3,6 +3,9 @@ import { Directive, TemplateRef, ViewContainerRef, OnInit } from '@angular/core'
 @Directive({
   selector: '[winter]'
 })
+
+//!<ng-container>    <p *winter>...</p> 
+
 export class WinterDirective implements OnInit {
 
   constructor(private viewContainerRef: ViewContainerRef, private host: TemplateRef<any>) { }

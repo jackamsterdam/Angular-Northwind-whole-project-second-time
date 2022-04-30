@@ -1,0 +1,17 @@
+<div class="box" *ngIf="product">
+<h3>Name: {{product.name}}</h3>
+<h3>Price: {{product.price}}</h3>
+<h3>Stock:{{product.stock}}</h3>
+<img [src]="productImageUrl + product.imageName">
+<br>
+
+
+
+<!-- <button routerLink="/products">Go Back</button>
+<button routerLink="/products/edit/{{product.id}}">Edit</button> -->
+<a routerLink="/products">Back to List</a>
+<span> | </span>
+<a routerLink="/products/edit/{{product.id}}">Edit</a>
+<span> | </span>
+<a href="javascript:void(0)" (click)="deleteProduct()">Delete</a>
+</div>

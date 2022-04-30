@@ -3,7 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  // dont forget slash at end 
+  productsUrl: 'http://localhost:3030/api/products/',
+  productsImageUrl: 'http://localhost:3030/api/products/images/'
 };
 
 /*

@@ -1,0 +1,23 @@
+<div class="box">
+    <div>
+        {{product.name}}
+        <br>
+        Price: {{product.price}}
+        <br>
+        Stock: {{product.stock}}
+
+    </div>
+    <div>
+        <a routerLink="/products/details/{{product.id}}">
+           
+            <img [src]="productImageUrl + product.imageName">
+        </a>
+       <!-- this works: but we using interpolation for variables but src is an attribute so we shohuold be using property binding instead like above   -->
+       <!-- <img src={{productImageUrl}}{{product.imageName}}> -->
+
+       <!-- react:  -->
+       <!-- <NavLink to={"/products/details/" + props.product.id}>
+        <img src={config.productsImageUrl + props.product.imageName} /> -->
+        
+    </div>
+</div>
