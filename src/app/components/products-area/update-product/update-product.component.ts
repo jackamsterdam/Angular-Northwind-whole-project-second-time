@@ -34,6 +34,7 @@ export class UpdateProductComponent implements OnInit {
      this.nameInput = new FormControl(this.product.name, [Validators.required, Validators.minLength(3)])
      this.priceInput = new FormControl(this.product.price, [Validators.required, Validators.min(0), Validators.max(1000)])
      this.stockInput = new FormControl(this.product.stock, [Validators.required, Validators.min(0), Validators.max(10000)])
+     this.imageInput = new FormControl()
      this.productForm = new FormGroup({
        nameBox: this.nameInput,
        priceBox: this.priceInput,

@@ -38,6 +38,7 @@ import { UpdateProductComponent } from './components/products-area/update-produc
 import { AboutComponent } from './components/about-area/about/about.component';
 import { PageNotFoundComponent } from './components/layout-area/page-not-found/page-not-found.component';
 import { ProductCardComponent } from './components/products-area/product-card/product-card.component';
+import { RandomNumbersComponent } from './components/about-area/random-numbers/random-numbers.component';
 
 @NgModule({
   declarations: [
@@ -73,7 +74,8 @@ import { ProductCardComponent } from './components/products-area/product-card/pr
     UpdateProductComponent,
     AboutComponent,
     PageNotFoundComponent,
-    ProductCardComponent
+    ProductCardComponent,
+    RandomNumbersComponent
     
   ],
   imports: [
