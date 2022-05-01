@@ -1,3 +1,6 @@
+import { LogoutComponent } from './components/auth-area/logout/logout.component';
+import { LoginComponent } from './components/auth-area/login/login.component';
+import { RegisterComponent } from './components/auth-area/register/register.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './components/about-area/about/about.component';
@@ -9,6 +12,11 @@ import { ProductListComponent } from './components/products-area/product-list/pr
 import { UpdateProductComponent } from './components/products-area/update-product/update-product.component';
 
 const routes: Routes = [
+
+ {path: 'register', component: RegisterComponent},
+ {path: 'login', component: LoginComponent},
+ {path: 'logout', component: LogoutComponent},
+
   {path: 'home', component: HomeComponent},
   {path: 'products', component: ProductListComponent},
   {path: 'products/details/:id', component: ProductDetailsComponent},

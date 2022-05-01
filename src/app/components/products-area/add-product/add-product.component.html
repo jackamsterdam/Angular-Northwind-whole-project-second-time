@@ -1,7 +1,7 @@
 <div class="box">
     <form (ngSubmit)="add()" #formInfo="ngForm">
         <h2>Add Product</h2>
-
+<!-- every line you write ngModel twice one for 2 way binding the other for form errors  -->
         <label>Name: </label>
         <input type="text" name="name" [(ngModel)]="product.name" #nameBox="ngModel" required minlength="3">
         <span *ngIf="nameBox.touched && nameBox.errors?.['required']">Missing name</span>

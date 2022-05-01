@@ -1,0 +1,18 @@
+<div class="box">
+  <form (ngSubmit)="submit()" #formInfo="ngForm">
+    <h2>Login</h2>
+
+    <label>Username: </label>
+    <input type="text" name="username" [(ngModel)]="credentials.username" #usernameBox="ngModel" required minlength="3" />
+    <span *ngIf="usernameBox.touched && usernameBox.errors?.['required']">Missing username</span>
+    <span *ngIf="usernameBox.touched && usernameBox.errors?.['minlength']">Length must be minimum 3 chars</span>
+
+    <label>Password: </label>
+    <input type="password" name="password" [(ngModel)]="credentials.password" #passwordBox="ngModel" required minlength="3">
+    <span *ngIf="passwordBox.touched && passwordBox.errors?.['required']">Missing Password</span>
+    <span *ngIf="passwordBox.touched && passwordBox.errors?.['minlength']">Length must be minimum 3 chars</span>
+
+    <button [disabled]="formInfo.invalid">Login</button>
+  </form>
+</div>
+ 

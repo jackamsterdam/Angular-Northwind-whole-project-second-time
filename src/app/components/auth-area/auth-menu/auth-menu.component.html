@@ -1,0 +1,27 @@
+<div>
+
+    <!-- Hello Guest | Login | Register 
+    Hello Jack Amsterdam | Logout  -->
+<!-- fragment in react ng-container in Angular  -->
+    <ng-container *ngIf="!user">
+        <span>Hello Guest</span>
+        <span> | </span>
+        <a routerLink="/login">Login</a>
+        <span> | </span>
+        <a  routerLink="/register">Register</a>
+        
+
+    </ng-container>
+    <ng-container *ngIf="user">
+        <span>Hello {{user.firstName | titlecase}} {{user.lastName | titlecase}}</span>
+        <span> | </span>
+        <a routerLink="logout">Logout</a>
+
+    </ng-container>
+
+</div>
+
+
+  <!-- אסור  -->
+         <!-- href casue refreshes the page  -->    
+<!-- routerlinke is a directive of angular  -->

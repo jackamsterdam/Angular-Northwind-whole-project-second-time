@@ -1,0 +1,32 @@
+<div class="box">
+    <form (ngSubmit)="submit()" [formGroup]="authForm">
+        <h2>Register</h2>
+
+        <label>First Name:</label>
+        <input type="text" [formControl]="firstNameInput" required minlength="3">
+        <span *ngIf="firstNameInput.touched && firstNameInput.errors?.['required']">Missing first name</span>
+        <span *ngIf="firstNameInput.touched && firstNameInput.errors?.['minlength']">Minimum of 3 chars</span>
+
+        <label>Last name:</label>
+        <input type="text" [formControl]="lastNameInput" required minlength="3" >
+        <span *ngIf="lastNameInput.touched && lastNameInput.errors?.['required']">Missing last name</span>
+        <span *ngIf="lastNameInput.touched && lastNameInput.errors?.['minlength']">Minimum of 3 chars</span>
+
+        <label>Username: </label>
+        <input type="text" [formControl]="usernameInput" required minlength="3">
+        <span *ngIf="usernameInput.touched && usernameInput.errors?.['required']">Missing username</span>
+        <span *ngIf="usernameInput.touched && usernameInput.errors?.['minlength']">Minimum of 3 chars</span>
+
+        <label>Password: </label>
+        <input type="password" [formControl]="passwordInput" required minlength="3">
+        <span *ngIf="passwordInput.touched && passwordInput.errors?.['required']">Missing password</span>
+        <span *ngIf="passwordInput.touched && passwordInput.errors?.['minlength']">Minimum of 3 chars</span>
+
+
+
+
+
+
+        <button [disabled]="authForm.invalid">Register</button>
+    </form>
+</div>

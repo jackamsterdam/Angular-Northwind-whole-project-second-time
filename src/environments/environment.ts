@@ -6,7 +6,9 @@ export const environment = {
   production: false,
   // dont forget slash at end 
   productsUrl: 'http://localhost:3030/api/products/',
-  productsImageUrl: 'http://localhost:3030/api/products/images/'
+  productsImageUrl: 'http://localhost:3030/api/products/images/',
+  registerUrl: 'http://localhost:3030/api/auth/register/',
+  loginUrl: 'http://localhost:3030/api/auth/login/'
 };
 
 /*

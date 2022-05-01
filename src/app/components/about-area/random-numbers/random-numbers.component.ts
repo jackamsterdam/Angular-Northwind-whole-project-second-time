@@ -18,11 +18,11 @@ private subscription: Subscription
 
   start(): void{
     // Observable without any operators:
-    // this.subscription = this.generator.generate(20).subscribe({
-    //   next: (num: number) => this.arr.push(num),
-    //   error: (err: any)  => this.notify.error(err),
-    //   complete: () => this.notify.success('Observable complete :-)')
-    // })
+    this.subscription = this.generator.generate(20).subscribe({
+      next: (num: number) => this.arr.push(num),
+      error: (err: any)  => this.notify.error(err),
+      complete: () => this.notify.success('Observable complete :-)')
+    })
 
   // Observable with filter operator (on-the-fly):
   // this.subscription = this.generator.generate(20).pipe(filter(n => n%2 === 0)).subscribe({

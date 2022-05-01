@@ -1,3 +1,4 @@
+import { JwtInterceptor } from './services/jwt.interceptor';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -30,7 +31,7 @@ import { HelpComponent } from './components/home-area/help/help.component';
 import { HighlightDirective } from './directives/highlight.directive';
 import { WinterDirective } from './directives/winter.directive';
 import { WinterSaleComponent } from './components/home-area/winter-sale/winter-sale.component';
-import {HttpClientModule} from '@angular/common/http';
+import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import { ProductListComponent } from './components/products-area/product-list/product-list.component';
 import { ProductDetailsComponent } from './components/products-area/product-details/product-details.component';
 import { AddProductComponent } from './components/products-area/add-product/add-product.component';
@@ -39,6 +40,10 @@ import { AboutComponent } from './components/about-area/about/about.component';
 import { PageNotFoundComponent } from './components/layout-area/page-not-found/page-not-found.component';
 import { ProductCardComponent } from './components/products-area/product-card/product-card.component';
 import { RandomNumbersComponent } from './components/about-area/random-numbers/random-numbers.component';
+import { AuthMenuComponent } from './components/auth-area/auth-menu/auth-menu.component';
+import { RegisterComponent } from './components/auth-area/register/register.component';
+import { LoginComponent } from './components/auth-area/login/login.component';
+import { LogoutComponent } from './components/auth-area/logout/logout.component';
 
 @NgModule({
   declarations: [
@@ -75,7 +80,11 @@ import { RandomNumbersComponent } from './components/about-area/random-numbers/r
     AboutComponent,
     PageNotFoundComponent,
     ProductCardComponent,
-    RandomNumbersComponent
+    RandomNumbersComponent,
+    AuthMenuComponent,
+    RegisterComponent,
+    LoginComponent,
+    LogoutComponent
     
   ],
   imports: [
@@ -87,7 +96,11 @@ import { RandomNumbersComponent } from './components/about-area/random-numbers/r
     HttpClientModule, //need this for http requests
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [{
+    useClass: JwtInterceptor,
+    provide: HTTP_INTERCEPTORS,
+    multi: true
+  }],
   bootstrap: [LayoutComponent]
 })
 export class AppModule { }
