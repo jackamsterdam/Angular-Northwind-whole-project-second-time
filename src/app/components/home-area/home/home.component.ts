@@ -15,5 +15,5 @@ export class HomeComponent implements OnInit {
   displaySurveyResult(result: string):void {
     console.log('Survey Result ' + result)
   }
-
+    
 }

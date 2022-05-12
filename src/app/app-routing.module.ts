@@ -10,6 +10,8 @@ import { AddProductComponent } from './components/products-area/add-product/add-
 import { ProductDetailsComponent } from './components/products-area/product-details/product-details.component';
 import { ProductListComponent } from './components/products-area/product-list/product-list.component';
 import { UpdateProductComponent } from './components/products-area/update-product/update-product.component';
+import { AuthGuard } from './services/auth.guard';
+import { AdminGuard } from './services/admin.guard';
 
 const routes: Routes = [
 
@@ -21,7 +23,7 @@ const routes: Routes = [
   {path: 'products', component: ProductListComponent},
   {path: 'products/details/:id', component: ProductDetailsComponent},
   {path: 'products/edit/:id', component: UpdateProductComponent},
-  {path:'products/new', component: AddProductComponent},
+  {path:'products/new', component: AddProductComponent, canActivate: [AuthGuard, AdminGuard]},
   {path: 'about', component: AboutComponent},
 
   // Default route:
